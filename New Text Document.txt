@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apex Construction – Professional Building Services</title>
+  <meta name="description" content="Apex Construction provides high-quality residential and commercial construction, renovation and maintenance services.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #111827;
+      --accent: #f59e0b;
+      --accent-soft: rgba(245, 158, 11, 0.1);
+      --bg: #0b1120;
+      --card: #020617;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --radius: 18px;
+      --shadow-soft: 0 20px 40px rgba(15, 23, 42, 0.7);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top, #1f2937 0, #020617 55%, #000 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.97), rgba(15, 23, 42, 0.75), transparent);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .logo-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: conic-gradient(from 140deg, #fbbf24, #f97316, #ec4899, #6366f1, #22c55e, #fbbf24);
+      padding: 2px;
+    }
+
+    .logo-mark-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      background: #020617;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #e5e7eb;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .logo-text span:first-child {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .logo-text span:last-child {
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      font-size: 0.85rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #f9fafb;
+      transform: translateY(-1px);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.6rem 1.1rem;
+      border-radius: 999px;
+      border: 1px solid rgba(249, 250, 251, 0.12);
+      background: radial-gradient(circle at top left, rgba(248, 250, 252, 0.16), rgba(15, 23, 42, 0.95));
+      color: #f9fafb;
+      font-size: 0.85rem;
+      font-weight: 500;
+      gap: 0.35rem;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.9);
+    }
+
+    .btn span.icon {
+      font-size: 1.05rem;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      border-color: rgba(249, 250, 251, 0.3);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 1);
+      background: radial-gradient(circle at top left, rgba(248, 250, 252, 0.22), rgba(15, 23, 42, 0.98));
+    }
+
+    .btn-outline {
+      background: transparent;
+      border-color: rgba(148, 163, 184, 0.4);
+      box-shadow: none;
+    }
+
+    .btn-outline:hover {
+      background: rgba(15, 23, 42, 0.6);
+      border-color: rgba(249, 250, 251, 0.5);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 4rem 0 3rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      color: var(--muted);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-bottom: 1.2rem;
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.35);
+    }
+
+    .hero-title {
+      font-size: clamp(2.2rem, 3.2vw + 1rem, 3.3rem);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero-title span.highlight {
+      background: linear-gradient(120deg, #fbbf24, #f97316, #ec4899, #6366f1);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 0.98rem;
+      color: var(--muted);
+      max-width: 32rem;
+      margin-bottom: 1.6rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .hero-meta strong {
+      display: block;
+      font-size: 0.9rem;
+      color: #e5e7eb;
+    }
+
+    .hero-card {
+      background: radial-gradient(circle at top left, rgba(248, 250, 252, 0.06), rgba(15, 23, 42, 0.96));
+      border-radius: 28px;
+      padding: 1.4rem;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background: conic-gradient(from 220deg, transparent 0deg, rgba(56, 189, 248, 0.06) 90deg, transparent 180deg);
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    .hero-card-inner {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .hero-card-main-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .hero-card-main-subtitle {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.8rem;
+    }
+
+    .hero-card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero-card-tag {
+      font-size: 0.7rem;
+      padding: 0.15rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: rgba(15, 23, 42, 0.8);
+      color: var(--muted);
+    }
+
+    .hero-card-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.78rem;
+      padding: 0.28rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(22, 163, 74, 0.16);
+      color: #bbf7d0;
+      border: 1px solid rgba(22, 163, 74, 0.7);
+      margin-top: 0.3rem;
+    }
+
+    .hero-card-badge span.dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #22c55e;
+    }
+
+    .hero-card-stat {
+      text-align: right;
+    }
+
+    .hero-card-stat h3 {
+      font-size: 1.9rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      background: linear-gradient(120deg, #fbbf24, #f97316, #ec4899, #6366f1);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-card-stat span {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .hero-card-mini {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.6rem;
+      margin-top: 0.9rem;
+      padding-top: 0.8rem;
+      border-top: 1px dashed rgba(148, 163, 184, 0.5);
+      font-size: 0.76rem;
+      color: var(--muted);
+    }
+
+    .hero-card-mini strong {
+      color: #e5e7eb;
+    }
+
+    /* Sections */
+    section {
+      padding: 3.2rem 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .section-kicker {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      margin-bottom: 0.3rem;
+    }
+
+    .section-title {
+      font-size: 1.7rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: var(--muted);
+      max-width: 30rem;
+      margin: 0.25rem auto 0;
+    }
+
+    /* Services */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.3rem;
+    }
+
+    .card {
+      background: rgba(15, 23, 42, 0.96);
+      border-radius: var(--radius);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      padding: 1.25rem;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
+    }
+
+    .card-highlight {
+      border-color: rgba(245, 158, 11, 0.9);
+      background: radial-gradient(circle at top, rgba(251, 191, 36, 0.16), rgba(15, 23, 42, 0.98));
+    }
+
+    .card-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+      background: var(--accent-soft);
+      border: 1px solid rgba(245, 158, 11, 0.7);
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .card p {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+    }
+
+    .card ul {
+      list-style: none;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .card ul li {
+      margin-bottom: 0.25rem;
+    }
+
+    .card ul li::before {
+      content: "•";
+      margin-right: 0.35rem;
+      color: var(--accent);
+    }
+
+    /* Projects */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.1rem;
+    }
+
+    .project-card {
+      border-radius: var(--radius);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      overflow: hidden;
+      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.9), #020617);
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.9);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-image {
+      height: 150px;
+      background: linear-gradient(135deg, rgba(248, 250, 252, 0.05), rgba(15, 23, 42, 0.95));
+      position: relative;
+    }
+
+    .project-overlay {
+      position: absolute;
+      inset: 18%;
+      border-radius: 14px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.95));
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0.8rem;
+      font-size: 0.78rem;
+    }
+
+    .project-badge {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      margin-bottom: 0.3rem;
+    }
+
+    .project-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.45rem;
+    }
+
+    .project-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+
+    .project-body {
+      padding: 0.85rem 0.95rem 1rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* Testimonials */
+    .testimonials {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .quote-card {
+      background: rgba(15, 23, 42, 0.96);
+      border-radius: 24px;
+      padding: 1.4rem;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .quote-mark {
+      position: absolute;
+      top: -16px;
+      right: 16px;
+      font-size: 4rem;
+      color: rgba(55, 65, 81, 0.35);
+      pointer-events: none;
+    }
+
+    .quote-card p {
+      font-size: 0.9rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .quote-author {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 0.8rem;
+    }
+
+    .quote-avatar {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #f97316, #22c55e);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #020617;
+    }
+
+    .quote-author span {
+      display: block;
+      color: var(--muted);
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+      gap: 0.2rem;
+      font-size: 0.78rem;
+      color: #fbbf24;
+      margin-top: 0.25rem;
+    }
+
+    .star {
+      font-size: 0.9rem;
+    }
+
+    .stats-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+      font-size: 0.8rem;
+    }
+
+    .stat-pill {
+      padding: 0.7rem;
+      border-radius: 16px;
+      border: 1px dashed rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.7);
+    }
+
+    .stat-pill strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 0.15rem;
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 1.7rem;
+      align-items: start;
+    }
+
+    form {
+      background: rgba(15, 23, 42, 0.97);
+      border-radius: 22px;
+      padding: 1.4rem;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .field-group {
+      margin-bottom: 0.9rem;
+    }
+
+    label {
+      display: block;
+      font-size: 0.78rem;
+      margin-bottom: 0.2rem;
+      color: var(--muted);
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      padding: 0.55rem 0.7rem;
+      background: rgba(15, 23, 42, 0.9);
+      color: #e5e7eb;
+      font-size: 0.82rem;
+      outline: none;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: rgba(245, 158, 11, 0.9);
+      box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.7);
+      background: rgba(15, 23, 42, 0.98);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+
+    .contact-info {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .contact-info h3 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      color: #e5e7eb;
+    }
+
+    .contact-list {
+      list-style: none;
+      margin: 0.8rem 0 0;
+    }
+
+    .contact-list li {
+      margin-bottom: 0.45rem;
+    }
+
+    .contact-list span {
+      color: #e5e7eb;
+      font-weight: 500;
+    }
+
+    .badge-inline {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      background: rgba(34, 197, 94, 0.14);
+      border: 1px solid rgba(34, 197, 94, 0.8);
+      color: #bbf7d0;
+      font-size: 0.72rem;
+      margin-top: 0.35rem;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid rgba(31, 41, 55, 1);
+      padding: 1.5rem 0 2rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+    }
+
+    .footer-links a:hover {
+      color: #e5e7eb;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-grid,
+      .testimonials,
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero-card-stat {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .hero {
+        padding-top: 3rem;
+      }
+      section {
+        padding: 2.5rem 0;
+      }
+      .grid-3,
+      .projects-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+      .hero-card {
+        padding: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        <div class="logo-mark">
+          <div class="logo-mark-inner">AC</div>
+        </div>
+        <div class="logo-text">
+          <span>Apex Construction</span>
+          <span>Building better spaces</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#testimonials">Clients</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="btn btn-outline">
+          <span class="icon">📞</span> Free site visit
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="badge">
+            <span class="badge-dot"></span>
+            Trusted construction partner
+          </div>
+          <h1 class="hero-title">
+            Precision-built spaces for <span class="highlight">modern living.</span>
+          </h1>
+          <p class="hero-subtitle">
+            Apex Construction delivers high-end residential and commercial builds, renovations and maintenance with a focus on detail, safety and clear communication.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn">
+              <span class="icon">✉️</span>
+              Request a quote
+            </a>
+            <a href="#projects" class="btn btn-outline">
+              View recent work
+            </a>
+          </div>
+          <div class="hero-meta">
+            <div>
+              <strong>10+ years</strong>
+              Experience in residential & commercial projects
+            </div>
+            <div>
+              <strong>On-time delivery</strong>
+              Clear timelines & weekly progress updates
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <div class="hero-card-inner">
+            <div>
+              <div class="hero-card-main-title">Full-service project management</div>
+              <div class="hero-card-main-subtitle">
+                From design to handover, one team handles planning, permits and build.
+              </div>
+              <div class="hero-card-tags">
+                <span class="hero-card-tag">New builds</span>
+                <span class="hero-card-tag">Renovations</span>
+                <span class="hero-card-tag">Extensions</span>
+                <span class="hero-card-tag">Fit-outs</span>
+              </div>
+              <div class="hero-card-badge">
+                <span class="dot"></span>
+                <span>Free consultation & site visit</span>
+              </div>
+            </div>
+            <div class="hero-card-stat">
+              <h3>98%</h3>
+              <span>Projects completed on schedule</span>
+            </div>
+          </div>
+          <div class="hero-card-mini">
+            <div>
+              <strong>Health & safety first</strong>
+              Fully insured team with strict on-site procedures.
+            </div>
+            <div>
+              <strong>Areas covered</strong>
+              City centre, suburbs and nearby regions.
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Services</div>
+          <h2 class="section-title">End-to-end construction solutions</h2>
+          <p class="section-subtitle">
+            Whether you’re upgrading a single room or developing a full site, Apex Construction manages every stage with clarity and control.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card card-highlight">
+            <div class="card-icon">🏗️</div>
+            <h3>Residential builds & extensions</h3>
+            <p>
+              New homes, loft conversions and extensions designed around your lifestyle and budget.
+            </p>
+            <ul>
+              <li>Architect & engineer coordination</li>
+              <li>Planning & building control support</li>
+              <li>Energy-efficient materials</li>
+              <li>Fixed-stage payment structure</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🏢</div>
+            <h3>Commercial fit-outs</h3>
+            <p>
+              High-impact spaces for offices, retail and hospitality that reflect your brand.
+            </p>
+            <ul>
+              <li>Office & co-working layouts</li>
+              <li>Retail and restaurant builds</li>
+              <li>Minimal downtime for your business</li>
+              <li>Out-of-hours work available</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🛠️</div>
+            <h3>Renovations & maintenance</h3>
+            <p>
+              From bathrooms and kitchens to full property refreshes, we upgrade tired spaces fast.
+            </p>
+            <ul>
+              <li>Kitchens & bathrooms</li>
+              <li>Flooring, plastering & decorating</li>
+              <li>Structural repairs</li>
+              <li>Ongoing property maintenance</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Projects</div>
+          <h2 class="section-title">Recent work highlights</h2>
+          <p class="section-subtitle">
+            A selection of builds and refurbishments delivered for homeowners, investors and businesses.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-image">
+              <div class="project-overlay">
+                <div class="project-badge">Residential</div>
+                <div class="project-title">Family home extension & open-plan kitchen</div>
+                <div class="project-meta">
+                  <span>Hook, London</span>
+                  <span>16-week programme</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              Open-plan kitchen-diner with roof lights, underfloor heating and full landscaping.
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image">
+              <div class="project-overlay">
+                <div class="project-badge">Commercial</div>
+                <div class="project-title">High-street retail refit</div>
+                <div class="project-meta">
+                  <span>City centre</span>
+                  <span>8-week fit-out</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              Full interior strip-out, new lighting, signage, accessibility ramp and storage solutions.
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image">
+              <div class="project-overlay">
+                <div class="project-badge">Renovation</div>
+                <div class="project-title">Two-bed apartment modernisation</div>
+                <div class="project-meta">
+                  <span>Investment property</span>
+                  <span>6-week turnaround</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              New kitchen, bathroom, flooring and re-wiring to meet current safety standards.
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS / STATS -->
+    <section id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Clients</div>
+          <h2 class="section-title">Property owners who trust Apex</h2>
+          <p class="section-subtitle">
+            Transparent quotes, clear timelines and tidy sites keep our clients coming back for their next project.
+          </p>
+        </div>
+
+        <div class="testimonials">
+          <div class="quote-card">
+            <div class="quote-mark">“</div>
+            <p>
+              “From the first site visit we knew we were in safe hands. The team kept us updated every week and delivered the extension exactly when they promised. The finish is better than we imagined.”
+            </p>
+            <div class="quote-author">
+              <div class="quote-avatar">J</div>
+              <div>
+                <strong>James & Priya</strong>
+                <span>Homeowners – rear extension project</span>
+                <div class="rating">
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span>5.0 average client rating</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stats-list">
+            <div class="stat-pill">
+              <strong>120+ projects</strong>
+              Residential, commercial and investment properties completed.
+            </div>
+            <div class="stat-pill">
+              <strong>70% referrals</strong>
+              Most new work comes via recommendations from existing clients.
+            </div>
+            <div class="stat-pill">
+              <strong>Fully insured</strong>
+              Public liability and employer’s insurance for peace of mind.
+            </div>
+            <div class="stat-pill">
+              <strong>Clear paperwork</strong>
+              Detailed scope, programme and payment schedule agreed upfront.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Contact</div>
+          <h2 class="section-title">Request a site visit or quote</h2>
+          <p class="section-subtitle">
+            Share a few details about your project and the team will be in touch within one working day.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <form onsubmit="handleSubmit(event)">
+            <div class="field-group">
+              <label for="name">Name</label>
+              <input id="name" type="text" placeholder="Your full name" required />
+            </div>
+            <div class="field-group">
+              <label for="email">Email</label>
+              <input id="email" type="email" placeholder="you@example.com" required />
+            </div>
+            <div class="field-group">
+              <label for="phone">Phone</label>
+              <input id="phone" type="tel" placeholder="+44 7000 000000" />
+            </div>
+            <div class="field-group">
+              <label for="service">Type of project</label>
+              <input id="service" type="text" placeholder="Extension, refurbishment, fit-out…" />
+            </div>
+            <div class="field-group">
+              <label for="message">Project details</label>
+              <textarea id="message" placeholder="Tell us about the property, your goals and ideal timeline." required></textarea>
+            </div>
+            <button type="submit" class="btn" style="width:100%;margin-top:0.4rem;">
+              <span class="icon">📩</span>
+              Send enquiry
+            </button>
+            <p id="form-status" style="margin-top:0.4rem;font-size:0.76rem;color:var(--muted);"></p>
+          </form>
+
+          <div class="contact-info">
+            <h3>Contact & coverage</h3>
+            <p>
+              Apex Construction operates across London and surrounding areas. For larger commercial projects we can travel further by arrangement.
+            </p>
+            <ul class="contact-list">
+              <li><span>Phone:</span> +44 1234 567 890</li>
+              <li><span>Email:</span> hello@apex-construction.co.uk</li>
+              <li><span>Address:</span> 15 Green Road, London, UK</li>
+            </ul>
+            <div class="badge-inline">
+              <span>✔</span>
+              <span>Free, no-obligation quotations</span>
+            </div>
+            <p style="margin-top:0.9rem;">
+              Prefer WhatsApp? Add a quick note in your enquiry and we’ll send a message instead of calling.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Apex Construction. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="#">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // simple front-end helpers
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      const status = document.getElementById("form-status");
+      status.textContent = "Form submitted. Connect this form to your email or CRM to receive enquiries.";
+    }
+  </script>
+</body>
+</html>
